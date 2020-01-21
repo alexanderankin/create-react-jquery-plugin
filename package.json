@@ -18,6 +18,15 @@
     "create",
     "create-react-app"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alexanderankin/create-react-jquery-plugin.git"
+  },
   "author": "Dave Ankin<daveankin@gmail.com>",
-  "license": "MIT"
+  "license": "GPL-3.0-or-later",
+  "dependencies": {},
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^7.0.0"
+  }
 }
