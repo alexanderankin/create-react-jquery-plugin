@@ -1,0 +1,23 @@
+{
+  "name": "create-react-jquery-plugin",
+  "version": "0.0.1",
+  "description": "CLI for bootstrapping a React-based jQuery plugin",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "bin": {
+    "create-react-jquery-plugin": "create.js"
+  },
+  "keywords": [
+    "react",
+    "jquery",
+    "component",
+    "plugin",
+    "create-react",
+    "create",
+    "create-react-app"
+  ],
+  "author": "Dave Ankin<daveankin@gmail.com>",
+  "license": "MIT"
+}
