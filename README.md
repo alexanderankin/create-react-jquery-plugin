@@ -30,6 +30,17 @@ about the git configuration (to update the package.json author and repository
 fields), copies everything from the template, and adds a bunch of dependencies
 to the package.json so you can install them with yarn install or npm install.
 
+## Dependencies
+
+The template was created with
+
+```
+yarn add -D dotenv webpack webpack-cli mini-css-extract-plugin @babel/cli \
+  @babel/core @babel/plugin-proposal-class-properties @babel/preset-env \
+  @babel/preset-react babel-loader css-loader react react-dom prop-types \
+  webpack-dev-server
+```
+
 ## Shoutouts
 
 [@swizec](https://twitter.com/swizec) for the blog post which inspired this

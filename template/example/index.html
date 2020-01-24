@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title><%= project.spacedName %> Example</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <!-- the plugin -->
+    <link rel="stylesheet" href="/plugin.css">
+    <script src="/plugin.js"></script>
+
+    <!-- The live reload -->
+    <meta http-equiv="Content-Security-Policy" content="connect-src 'self' ws:;">
+
+    <!-- The libraries -->
+    <script>delete window['fetch'];</script><!-- replace fetch to mock the backend with pretender -->
+    <script src="https://cdn.jsdelivr.net/npm/whatwg-fetch@3.0.0/dist/fetch.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/route-recognizer@0.3.4/dist/route-recognizer.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fake-xml-http-request@2.1.1/fake_xml_http_request.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/pretender@3.2.0/dist/pretender.min.js"></script>
+    <script src="/example.js"></script>
+  </head>
+  <body>
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col">
+          <h1><%= project.spacedName %></h1>
+          <div id="root"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

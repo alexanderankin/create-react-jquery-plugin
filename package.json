@@ -25,7 +25,8 @@
   "author": "Dave Ankin<daveankin@gmail.com>",
   "license": "GPL-3.0-or-later",
   "dependencies": {
-    "starter-kit-utils": "^0.0.1"
+    "inquirer": "^7.0.3",
+    "starter-kit-utils": "^0.0.3"
   },
   "devDependencies": {
     "chai": "^4.2.0",
