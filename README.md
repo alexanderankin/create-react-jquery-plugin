@@ -5,6 +5,18 @@ framework. The goal is to create a component, which can be distributed
 separately from an app or web page, but rather can be added to any page with
 jQuery already installed.
 
+## Changelog
+
+`v0.0.1`
+
+* It works
+
+`v0.0.2`
+
+* Comments in the package.json
+* React Redux and Promise, thunk, and logger middleware
+
+
 ## Usage:
 
 ```

@@ -1,6 +1,6 @@
 {
   "name": "create-react-jquery-plugin",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "CLI for bootstrapping a React-based jQuery plugin",
   "main": "index.js",
   "scripts": {
