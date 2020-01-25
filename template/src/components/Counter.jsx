@@ -1,23 +1,22 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
-export class Counter extends React.Component {
+class Counter extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      value: parseInt(props.value, 10),
       collapsed: false
     };
   }
 
   onClick = e => {
-    this.setState(state => {
-      state.value++; return state;
-    });
+    this.props.increment();
   }
 
   render() {
-    var { value, collapsed } = this.state;
+    var { collapsed } = this.state;
+    var { value, increment } = this.props;
     return (
       <div className="card text-center">
         <div className="card-header text-left">
@@ -34,10 +33,24 @@ export class Counter extends React.Component {
           <div className="card-body text-left" style={collapsed ? { visibility: 'hidden' } : {}}>
             <h4 className="card-title">Value</h4>
             <p className="card-text">The counter is now <b>{value}</b>. I was updated on {new Date() + ''}.</p>
-            <button type="button" className="btn btn-info" onClick={this.onClick}>Increment</button>
+            <button type="button" className="btn btn-info" onClick={increment}>Increment</button>
           </div>
         </div>
       </div>
     );
   }
 }
+
+function mapStateToProps(state) {
+  return { value: state.value };
+}
+
+var mapDispatchToProps = {
+  increment: () => ({ type: 'INCREMENT' })
+};
+
+var connectedCounter = connect(mapStateToProps, mapDispatchToProps)(Counter);
+
+export {
+  connectedCounter as Counter,
+};

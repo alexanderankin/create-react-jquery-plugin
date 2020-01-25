@@ -1,19 +1,19 @@
-// if jQuery is present
+// react
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import { Counter } from './components';
-import './style.css';
+import getApp from './app.jsx';
 
+// if jQuery is present
 if (typeof jQuery !== 'undefined') {
   (function ($) {
-    var pluginName = 'clickCounter';
+    var pluginName = '<%= project.camelName %>';
     var defaults = {
       value: 0
     };
 
     // wrap Component in Plugin
-    // (options is the argument passed to "$('#root').clickCounter(options)")
+    // (options is the argument passed to "$('#root').<%= project.camelName %>(options)")
     function Plugin(element, options) {
       this.element = element;
       this.settings = $.extend({}, defaults, options);
@@ -23,8 +23,7 @@ if (typeof jQuery !== 'undefined') {
     }
 
     Plugin.prototype.init = function() {
-      var el = this.element, s = this.settings;
-      this.component = ReactDOM.render(<Counter value={s.value} />, el);
+      this.component = ReactDOM.render(getApp(this.settings), this.element);
       return this;
     };
     

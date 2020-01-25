@@ -7,10 +7,8 @@ var path = require('path');
 
 module.exports = {
   plugins: [ new miniCSS() ],
-  // entry: { <%= project.camelName %>: './src/plugin.jsx' },
-  // output: { filename: '[<%= project.camelName %>].js' },
-  entry: { plugin: './src/plugin.jsx' },
-  output: { filename: '[name].js' },
+  entry: { <%= project.camelName %>: './src/plugin.jsx' },
+  output: { filename: 'plugin.js' },
   mode: process.env.NODE_ENV || 'development',
   devServer: {
     contentBase: './example',

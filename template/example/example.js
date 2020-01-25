@@ -7,7 +7,7 @@
   $(async () => {
     var response = await fetch('/api/counter');
     var data = await response.json();
-    $('#root').clickCounter(data);
+    $('#root').<%= project.camelName %>(data);
   });
 
   var server = new Pretender();
