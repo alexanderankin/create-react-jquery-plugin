@@ -19,5 +19,9 @@ module.exports = {
       { test: /\.jsx?$/, use: 'babel-loader', exclude: /node_modules/ },
       { test: /\.css$/,  use: [ miniCSS.loader, 'css-loader' ] }
     ]
+  },
+  watchOptions: {
+    poll: true,
+    ignored: /node_modules/
   }
 };

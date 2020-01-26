@@ -14,7 +14,7 @@
     "example": "webpack-dev-server",
     "format": "node -p \"var p = 'package.json'; fs.writeFileSync(p, JSON.stringify(JSON.parse(fs.readFileSync(p, 'utf8')), null, 2), 'utf8')\"",
     "links": "ln -fs dist/<%= project.camelName %>.js example/plugin.js; ln -fs dist/<%= project.camelName %>.css example/plugin.css;",
-    "postinstall": "<%= pm %> run links"
+    "postinstall": "<%= pm %> run links && <%= pm %> run format"
   },
   "author": "",
   "license": "ISC",

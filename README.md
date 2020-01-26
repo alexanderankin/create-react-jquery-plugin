@@ -16,6 +16,9 @@ jQuery already installed.
 * Comments in the package.json
 * React Redux and Promise, thunk, and logger middleware
 
+`v0.0.3`
+
+* do not watch `/node_modules/`
 
 ## Usage:
 
